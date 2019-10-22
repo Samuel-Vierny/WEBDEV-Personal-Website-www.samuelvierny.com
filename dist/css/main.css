@@ -2,6 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Alegreya|Kanit|Lexend+Mega&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Khula:300|Varela&display=swap");
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+
 * {
   box-sizing: border-box; }
 
@@ -17,7 +31,7 @@ body {
     background-attachment: fixed;
     background-size: cover; }
     body#bd-img:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -40,7 +54,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem; }
+    padding: 0.2rem 0rem; }
 
 a {
   color: #fff;
