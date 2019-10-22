@@ -6,10 +6,12 @@
 
 @import url("https://fonts.googleapis.com/css?family=Khula:300|Varela&display=swap");
 
-$primary-color: rgb(49, 47, 56);
+$primary-color: rgb(49, 45, 56);
 $secondary-color: #404fa5;
 $show-home-image: true;
+$show-second-image: true;
 $home-image: url("../img/korea\ photo\.jpg");
+$second-image: url("../img/000099660003.jpg");
 $background-opacity: 0.3;
 
 @mixin easeOut {
@@ -35,6 +37,35 @@ $background-opacity: 0.3;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+  //Other pages image
+  @if $show-second-image {
+  &#bd-img-2 {
+    background: $second-image;
+    background-attachment: fixed;
+    background-size: cover;
+
+    &:after {
+      //pseudo element, similar to applying an overlay, must use content:''
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+
+//Set Text Color (need a function here and not mixin because you need to return something, i.e. the color of the font)
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
