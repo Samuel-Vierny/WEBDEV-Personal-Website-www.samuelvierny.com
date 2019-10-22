@@ -6,13 +6,13 @@
 
 @import url("https://fonts.googleapis.com/css?family=Khula:300|Varela&display=swap");
 
-$primary-color: rgb(49, 45, 56);
+$primary-color: rgb(50, 47, 56);
 $secondary-color: #404fa5;
 $show-home-image: true;
 $show-second-image: true;
 $home-image: url("../img/korea\ photo\.jpg");
 $second-image: url("../img/000099660003.jpg");
-$background-opacity: 0.3;
+$background-opacity: 0.5;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -24,6 +24,9 @@ $background-opacity: 0.3;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-size: 100% 100%;
 
       &:after {
         //pseudo element, similar to applying an overlay, must use content:''
