@@ -1,5 +1,6 @@
 @import "config"; //here you exclude the _ and the scss, and it acts as a link to the other scss file
 @import "menu";
+@import "mobile";
 
 * {
   box-sizing: border-box;
