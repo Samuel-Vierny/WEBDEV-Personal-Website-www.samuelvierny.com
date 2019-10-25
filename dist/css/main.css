@@ -60,7 +60,6 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
     padding: 1rem 0;
     font-weight: 300;
     color: #fff;
@@ -279,11 +278,15 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .nav-link {
+    font-size: 30px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .nav-link {
+    font-size: 30px; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -292,21 +295,33 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
+  ul.menu-nav,
+  div.menu-branding {
+    position: relative;
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
+    ul.menu-nav.show,
+    div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
+  .w3-container {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0; }
   .menu-nav {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-    font-size: 24px; }
+    height: 70vh;
+    transform: translate3d(0%, -100%, 0);
+    font-size: 30px;
+    padding: 0rem 0; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .nav-link {
+    font-size: 24px; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -317,4 +332,6 @@ main {
       margin-top: 1rem;
       font-size: 3rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .nav-link {
+    font-size: 17px; } }
