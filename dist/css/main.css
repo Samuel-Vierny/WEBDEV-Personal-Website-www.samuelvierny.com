@@ -267,13 +267,14 @@ main {
 
 #main-footer {
   text-align: center;
+  margin: auto;
   padding: 1rem;
   background: #19181c;
   color: #fff;
   height: 60px;
   bottom: -60px;
-  width: 100%;
-  min-width: 100vh;
+  width: 100vw;
+  min-width: 1000px;
   position: absolute; }
 
 @media screen and (min-width: 1171px) {
@@ -321,7 +322,7 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr); }
   .nav-link {
-    font-size: 24px; } }
+    font-size: 26px; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -334,4 +335,4 @@ main {
   .projects {
     grid-template-columns: 1fr; }
   .nav-link {
-    font-size: 17px; } }
+    font-size: 20px; } }
