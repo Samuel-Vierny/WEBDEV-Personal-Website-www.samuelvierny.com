@@ -11,6 +11,7 @@ $secondary-color: #404fa5;
 $show-home-image: true;
 $show-second-image: true;
 $home-image: url("../img/korea\ photo\.jpg");
+$home-image1: url("../img/korea\ photo1\.jpg");
 $second-image: url("../img/000099660003.jpg");
 $background-opacity: 0.5;
 
@@ -40,13 +41,40 @@ $background-opacity: 0.5;
       }
     }
   }
+
   //Other pages image
   @if $show-second-image {
   &#bd-img-2 {
     background: $second-image;
     background-attachment: fixed;
     background-size: cover;
+    min-width: 1000px;
 
+    &:after {
+      //pseudo element, similar to applying an overlay, must use content:''
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      min-width: 1000px;
+      height: 100%;
+      z-index: -1;
+      background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+@mixin background1 {
+  @if $show-home-image {
+    &#bd-img {
+      background: $home-image1;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+
+      
     &:after {
       //pseudo element, similar to applying an overlay, must use content:''
       content: "";
@@ -57,9 +85,9 @@ $background-opacity: 0.5;
       height: 100%;
       z-index: -1;
       background: rgba($primary-color, $background-opacity);
-      }
     }
   }
+}
 }
 
 //Set Text Color (need a function here and not mixin because you need to return something, i.e. the color of the font)

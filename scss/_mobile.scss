@@ -1,3 +1,6 @@
+$home-image: url("../img/korea\ photo\.jpg");
+
+
 //Widescreens
 @include mediaXl {
   .projects {
@@ -72,7 +75,13 @@
   .nav-link {
     font-size: 26px;
   }
+
+  body {
+    @include background1;
+  }
+
 }
+
 //Smartphones
 @include mediaSm {
   main {

@@ -145,6 +145,10 @@ main {
 
 //Work/Projects
 
+#work {
+  min-width: 1000px;
+}
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -225,16 +229,19 @@ main {
 }
 
 #main-footer {
-  text-align: center;
-  margin: auto; 
-  padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
-  height: 60px;
-  bottom: -60px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding: 1rem;
   width: 100vw;
   min-width: 1000px;
   position: absolute;
+  height: 60px;
+  bottom: -60px;
+  min-height: 60px;
+  overflow: auto;
 }
 
 @import "mobile";
