@@ -32,3 +32,5 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Exit click on desktop
