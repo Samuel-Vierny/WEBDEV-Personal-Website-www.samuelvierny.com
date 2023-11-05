@@ -137,7 +137,9 @@ body#bd-img-2 {
   background: url("../img/000099660003.jpg");
   background-attachment: fixed;
   background-size: cover;
-  min-width: 1000px;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 body#bd-img-2:after {
   content: "";
@@ -146,6 +148,26 @@ body#bd-img-2:after {
   right: 0;
   width: 100%;
   min-width: 1000px;
+  height: 100%;
+  z-index: -1;
+  background: rgba(50, 47, 56, 0.5);
+}
+
+body#bd-img-3 {
+  background: url("../img/aboutbk.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+body#bd-img-3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
   height: 100%;
   z-index: -1;
   background: rgba(50, 47, 56, 0.5);
@@ -183,8 +205,8 @@ header {
 }
 
 main {
-  padding: 4rem;
   min-height: calc(100vh - 60px);
+  margin: 0;
 }
 main#home {
   min-height: calc(100vh - 0px);
@@ -205,14 +227,19 @@ main#home {
 main#home h1 {
   margin-top: 30vh;
 }
-main#about {
-  padding: 3rem 10rem 0 10rem;
-}
+
 main#work {
   padding: 5rem 10rem 0 10rem;
 }
 main#contact {
   padding: 5rem 10rem 0 10rem;
+}
+
+/*Sections on page: padding and margins for about area and music separated */
+
+#about {
+  padding: 7rem 10rem 4rem 10rem;
+  margin: 0;
 }
 
 .about-info {
@@ -227,10 +254,10 @@ main#contact {
   grid-area: bioimage;
   margin: auto;
   border: #000 1px solid;
-  width: 240px;
+  width: 280px;
   height: auto;
   position: relative;
-  border-radius: 1px;
+  border-radius: 60px;
 }
 
 div.trim {
@@ -249,19 +276,63 @@ div.trim {
 }
 .about-info .job-1 {
   grid-area: job1;
-  
+  background: #4f4b67ce; 
 }
 .about-info .job-2 {
   grid-area: job2;
+  background: #6a4e6cce;
 }
 .about-info .job-3 {
   grid-area: job3;
+  background: #6b4e53c7;
 }
 .about-info .job {
-  background: #5c5767;
-  padding: 0.5rem;
+  /*  background: #5c5767;*/
+  padding: 1rem;
   border-bottom: #404fa5 5px solid;
   margin-bottom: 50px;
+}
+
+.bio-p {
+  padding: 0.4rem 1.5rem;
+}
+
+#music {
+  text-align: center;
+  margin: auto;
+  background: #4f456e;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding: 0.1rem 12rem;
+}
+
+#heading-box-music {
+  text-align: center;
+  margin: auto;
+  background: #242742;
+  color: #fff;
+  text-align:left;
+  display: block;
+  margin: auto;
+  padding: 0.1rem 12rem;
+}
+
+h3.heading-secondary {
+  font-size: 2rem;
+  padding: 0.5rem;
+  }
+
+  
+#playlists {
+  background: #4f456e;
+  color: #fff;
+  display:inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 1rem 12rem 1rem 12rem;
+  width: 100%;
 }
 
 .music-links {
@@ -271,10 +342,17 @@ div.trim {
   margin: 1rem 1rem 2rem 1rem;
 }
 
-#music {
-  text-align: center;
-  margin: auto;
+.music-own {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1rem 1rem 2rem 1rem;
 }
+
+#music-playlists {
+  background: rgba(50, 47, 56, 0.5);
+  color: #fff;
+  margin: auto;
+  }
 
 #work {
   min-width: 1000px;
@@ -373,9 +451,8 @@ div.trim {
   color: #fff;
   text-align: center;
   display: block;
-  margin: auto;
   padding: 1rem;
-  width: 100vw;
+  width: 100%; /*before we had 100vw which messed up different pages depending on if they had a scrollbar or not. Stick to 100% instead for this case. */
   min-width: 1000px;
   position: absolute;
   height: 60px;
@@ -402,7 +479,7 @@ div.trim {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   main {
     align-items: center;
     text-align: center;
