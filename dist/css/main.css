@@ -208,6 +208,7 @@ main {
 }
 main#home {
   min-height: calc(100vh - 0px);
+  padding: 5rem;
 }
 main .icons {
   margin-top: 1rem;
