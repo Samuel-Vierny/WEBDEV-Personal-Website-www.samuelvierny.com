@@ -144,12 +144,11 @@ body#bd-img-2 {
 body#bd-img-2:after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
   background: rgba(50, 47, 56, 0.5);
+  min-width: 916px; /*needed to otherwise it will be too short. it must fit based on the padding and margins that are included inbetween. Also done for footer */
 }
 
 body#bd-img-3 {
@@ -212,6 +211,7 @@ main#home {
 }
 main .icons {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 main .icons a {
   padding: 0.7rem;
@@ -232,6 +232,7 @@ main#work {
 }
 main#contact {
   padding: 5rem 10rem 0 10rem;
+  min-width: 916px;
 }
 
 /*Sections on page: padding and margins for about area and music separated */
